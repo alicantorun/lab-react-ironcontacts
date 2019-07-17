@@ -8,8 +8,14 @@ class Contact extends Component {
         <td>
           <img src={this.props.data.pictureUrl} alt="" />
         </td>
-        <td>{this.props.data.name}</td>
+        <td>
+          {this.props.data.name}
+          {this.props.index}
+        </td>
         <td>{this.props.data.popularity}</td>
+        <td>
+          <button onClick={this.props.deleteContact}>Delete</button>
+        </td>
       </tr>
     );
   }
